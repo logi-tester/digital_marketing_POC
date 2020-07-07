@@ -30,7 +30,7 @@ Get Internal Links
         Exit For Loop If    ${test}==4
     END
 
-Get pagesource
+Get pagesource content
     Jenkins browser launch
     ${pagesource_content}=    Get Source
     ${get_length}=    Get Length    ${pagesource_content}
