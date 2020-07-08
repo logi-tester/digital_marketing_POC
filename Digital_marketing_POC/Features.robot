@@ -10,7 +10,7 @@ ${baseurl}        https://www.xerago.com/
 ${browser}        chrome
 
 *** Test Cases ***
-Internal link count val
+Internal link count validation
     Jenkins browser launch
     ${links_count}=    Get Element Count    xpath=.//a
     FOR    ${INDEX}    IN RANGE    1    ${links_count}
