@@ -32,9 +32,10 @@ Internal link count validation
 
 Word count page
     Jenkins browser launch
-    ${pagesource_content}=    Get Source
-    ${get_length}=    Get Length    ${pagesource_content}
-    Run Keyword If    100<${get_length}    Log To Console    Word are presented more than 100
+    ${text}=    Get Text    //body
+    @{result} =    Split String    ${text}    ${EMPTY}    -1
+    ${len}=    Get Length    ${result}
+    Run Keyword If    100<${len}    Log To Console    Word are presented more than 100
 
 *** Keywords ***
 Local browser launch
