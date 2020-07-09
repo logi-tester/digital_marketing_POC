@@ -13,9 +13,9 @@ ${excel_name}     urls.xls
 *** Test Cases ***
 Internal link count validation
     Open Excel    ${CURDIR}/${excel_name}
-    ${Col}=    Get Column Count    Sheet1
-    FOR    ${i}    IN RANGE    1    ${Col}
-        ${excel_url}=    Read Cell Data By Name    Sheet1    A${i}
+    ${Col}=    Get Row Count    Sheet1
+    FOR    ${i}    IN RANGE    0    ${Col}
+        ${excel_url}=    Read Cell Data By Coordinates    Sheet1    0    ${i}
         Jenkins browser launch    ${excel_url}
         ${links_count}=    Get Element Count    xpath=.//a
         For loop code for internal links    ${links_count}    ${excel_url}
