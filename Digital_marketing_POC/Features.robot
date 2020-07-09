@@ -12,7 +12,6 @@ ${browser}        chrome
 ${excel_name}     urls.xls
 *** Test Cases ***
 Internal link count validation
-    Internal link count validation
     Open Excel    ${CURDIR}/${excel_name}
     ${Col}=    Get Column Count    Sheet1
     FOR    ${i}    IN RANGE    1    ${Col}
