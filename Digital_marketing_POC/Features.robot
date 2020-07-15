@@ -22,7 +22,7 @@ Internal link count validation
         Close Browser
     END
 
-Word count page
+Page word count
     Jenkins browser launch  ${baseurl}
     ${text}=    Get Text    //body
     @{result} =    Split String    ${text}    ${EMPTY}    -1
